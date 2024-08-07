@@ -1,5 +1,5 @@
 //this component displays book
-import Bookcard from "./bookcard"
+// import Bookcard from "./bookcard"
 function Displaybox(){
 
 // let libraly = localStorage.getItem("Booktable")

@@ -13,7 +13,7 @@ function Delete({isbn}){
 
     return(
         
-        <button onClick={HandleDelete()}></button>
+        <button onClick={HandleDelete()}>Delete</button>
         
     )
 

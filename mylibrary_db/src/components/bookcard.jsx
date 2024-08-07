@@ -2,6 +2,7 @@ import Delete from "./delete"
 function Bookcard({book}){
 
 return(
+  <>
     <div style={{
       width:'340px',
       height:"490px",
@@ -44,12 +45,12 @@ return(
 
 
 
+
 <Delete/>
-     
     </div>
-   
+
     
-       
+   </>    
 )
 }
 export default Bookcard;
