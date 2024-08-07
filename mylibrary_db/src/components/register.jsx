@@ -1,30 +1,37 @@
-import Addbook from "./addbook";
+import {addbook} from "./addbook";
 import React, { useState } from 'react';
-
+ 
 function Register(){
 
-    const handleChange = (e) => {
-        setBook({ ...book, [e.target.name]: e.target.value });
-      };
-      const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(book);
-        alert("Succesful")
-        
-      };
+  const [inputs, setInputs] = useState({
+    ISBN: '',
+    TITLE: '',
+    PAGES_NUM: '',
+    EDITION: '',
+    PUBLISHER: '',
+    EDITOR: '',
+    COVER_BOOK_DESIGN: '',
+    PRICE: '',
+    FORMAT: '',
+    RELEASE_DATE: '',
+  });
+// console.log(book)
+   
+      const handleChange = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+        setInputs(values => ({...values, [name]: value}))
+      }
+      console.log(inputs)
 
-      const [book, setBook] = useState({
-        ISBN: '',
-        TITLE: '',
-        PAGES_NUM: '',
-        EDITION: '',
-        PUBLISHER: '',
-        EDITOR: '',
-        COVER_BOOK_DESIGN: '',
-        PRICE: '',
-        FORMAT: '',
-        RELEASE_DATE: '',
-      });
+      const handleSubmit = (event) => {
+        event.preventDefault();
+        // alert(inputs);
+        // alert('Form successfully submitted!');
+        addbook(inputs)
+      }
+
+      
     return(
         <>
         <div style={{display:"flex"}}>
@@ -33,11 +40,18 @@ function Register(){
     height:"600px",
     backgroundColor:"#847cf0",
     borderRadius:"20px",
+    alignContent:"center"
   
 
 }}>
 
+<p style={{
+  fontSize:"40px",
+  color:"white"
+}}
 
+>Share your story Inspire a reader</p>
+<img></img>
 
 </div>
 <div style={{
@@ -48,7 +62,8 @@ function Register(){
     marginRight:"-300px",
     boxShadow:"11px 11px  #e4e4ee ",
     borderRadius:"20px",
-    alignContent:"center"
+    alignContent:"center",
+    alignItems:"center"
   
 
 }}>
@@ -57,46 +72,48 @@ function Register(){
   
     <p style={{
         fontSize:"20px"
-    }}>Create an Account</p>
+    }}>Add a book to Library</p>
+
+
     <form onSubmit={handleSubmit}>
       <label>
         <input
           type="text"
           name="ISBN"
-          value={book.ISBN}
+          value={inputs.ISBN}
           placeholder="ISBN"
           onChange={handleChange}
         />
       </label>
       <br />
       <label>
-        
+        <br></br>
         <input
           type="text"
           name="TITLE"
-          value={book.TITLE}
+          value={inputs.TITLE}
           placeholder="Title"
           onChange={handleChange}
         />
       </label>
       <br />
       <label>
-        
+        <br></br>
         <input
           type="number"
           name="PAGES_NUM"
-          value={book.PAGES_NUM}
+          value={inputs.PAGES_NUM}
           placeholder="Pages"
           onChange={handleChange}
         />
       </label>
       <br />
       <label>
-        
+        <br></br>
         <input
           type="text"
           name="EDITION"
-          value={book.EDITION}
+          value={inputs.EDITION}
           placeholder="Edition"
           onChange={handleChange}
         />
@@ -104,11 +121,11 @@ function Register(){
       <br />
       <label>
         
-        
+        <br></br>
         <input
           type="text"
           name="PUBLISHER"
-          value={book.PUBLISHER}
+          value={inputs.PUBLISHER}
           placeholder="Publisher"
           onChange={handleChange}
         />
@@ -116,11 +133,11 @@ function Register(){
       <br />
       <label>
     
-        
+        <br></br>
         <input
           type="text"
           name="EDITOR"
-          value={book.EDITOR}
+          value={inputs.EDITOR}
           placeholder="Editor"
           onChange={handleChange}
         />
@@ -128,11 +145,11 @@ function Register(){
       <br />
       <label>
         
-        
+        <br></br>
         <input
           type="text"
           name="COVER_BOOK_DESIGN"
-          value={book.COVER_BOOK_DESIGN}
+          value={inputs.COVER_BOOK_DESIGN}
           placeholder="Cover Design"
           onChange={handleChange}
         />
@@ -140,11 +157,11 @@ function Register(){
       <br />
       <label>
         
-        
+        <br></br>
         <input
           type="text"
           name="PRICE"
-          value={book.PRICE}
+          value={inputs.PRICE}
           placeholder="Price"
           onChange={handleChange}
         />
@@ -152,11 +169,11 @@ function Register(){
       <br />
       <label>
 
-        
+        <br></br>
         <input
           type="text"
           name="FORMAT"
-          value={book.FORMAT}
+          value={inputs.FORMAT}
           placeholder="Format"
           onChange={handleChange}
         />
@@ -164,11 +181,11 @@ function Register(){
       <br />
       <label>
     
-        
+        <br></br>
         <input
           type="date"
           name="RELEASE_DATE"
-          value={book.RELEASE_DATE}
+          value={inputs.RELEASE_DATE}
           placeholder="Release Date"
           onChange={handleChange}
         />
@@ -186,7 +203,7 @@ function Register(){
 
 
   </div>      
-        <Addbook/>
+        {/* <addbook/> */}
         </>
 
 

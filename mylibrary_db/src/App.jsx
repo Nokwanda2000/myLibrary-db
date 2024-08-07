@@ -1,9 +1,8 @@
 import { useState } from 'react'
 
 import './App.css'
-import Delete from './components/delete'
-import Addbook from './components/addbook'
-import Update from './components/update'
+
+
 import Displaybox from './components/displaybox'
 import Bookcard from './components/bookcard'
 import Register from './components/register'
@@ -49,15 +48,15 @@ function App() {
       RELEASE_DATE:"2020/04/04"
   
   }]
-  localStorage.setItem("Booktable",JSON.stringify(Booktable));
+  // localStorage.setItem("Booktable",JSON.stringify(Booktable));
  
   return (
     <>
      
-    <Addbook book={Booktable[0]}/>
+ 
     <Displaybox/>
-    <Update/>
-    <Delete/>
+    
+
     <Bookcard book={Booktable[0]}/>
     <Register/>
 

@@ -1,4 +1,4 @@
-
+import Delete from "./delete"
 function Bookcard({book}){
 
 return(
@@ -16,9 +16,9 @@ return(
       
 
     }}>
-      <div>
+       <div>
         <img src={book.COVERbook_DESIGN}></img>
-      </div>
+      </div> 
       
       <div>
 
@@ -41,6 +41,11 @@ return(
                     float:'left',
                     marginLeft:"-210px"
       }}>{book.PRICE}</span>
+
+
+
+<Delete/>
+     
     </div>
    
     

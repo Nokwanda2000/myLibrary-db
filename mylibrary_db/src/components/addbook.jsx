@@ -1,16 +1,17 @@
 //this component creates a new book
-function Addbook({book}){
+ 
+
+export function addbook(book){
  let mybooks =  JSON.parse(localStorage.getItem("Booktable"))
  mybooks.push(book)
+ localStorage.setItem("Booktable", JSON.stringify(mybooks))
+setInterval()
 
- localStorage.setItem("Booktable",JSON.stringify(mybooks))
   
       
 
-    console.log(book)
-    console.log(mybooks)
- return(
-    <></>
- )
+   //  console.log(book)
+   //  console.log(mybooks)
+ 
+ 
 }
-export default Addbook;
