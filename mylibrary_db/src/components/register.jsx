@@ -1,5 +1,6 @@
 import {addbook} from "./addbook";
 import React, { useState } from 'react';
+// import IMG from "../assets/libraly logo.png"
  
 function Register(){
 
@@ -35,23 +36,28 @@ function Register(){
     return(
         <>
         <div style={{display:"flex"}}>
-<div style={{
+<div className="stlyle" style={{
     width:"370px",
     height:"600px",
     backgroundColor:"#847cf0",
     borderRadius:"20px",
-    alignContent:"center"
+    alignContent:"center",
+    marginTop:"20px",
+    borderBlockEndStyle:"inherit"
+  
   
 
 }}>
 
+
 <p style={{
   fontSize:"40px",
-  color:"white"
+  color:"white",
+
 }}
 
 >Share your story Inspire a reader</p>
-<img></img>
+
 
 </div>
 <div style={{
@@ -63,7 +69,8 @@ function Register(){
     boxShadow:"11px 11px  #e4e4ee ",
     borderRadius:"20px",
     alignContent:"center",
-    alignItems:"center"
+    alignItems:"center",
+    marginTop:"10px"
   
 
 }}>

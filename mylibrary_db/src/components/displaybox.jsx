@@ -1,16 +1,19 @@
-//this component displays book
-// import Bookcard from "./bookcard"
-function Displaybox(){
 
-// let libraly = localStorage.getItem("Booktable")
-// console.log(libraly)
-// let books = JSON.parse(book)
-// console.log(books)
+import Bookcard from "./bookcard"
+function Displaybox({bookList}){
+
+
     return(
     <>
-         {/* <Bookcard input={libraly}/>  */}
-     
+    <div style={{
+        display:"flex"
     
+    }}>
+
+    {bookList.map(item=>(
+         <Bookcard key={item.ISBN} book={item}/> 
+        ))}
+    </div>
     </>
     )
 

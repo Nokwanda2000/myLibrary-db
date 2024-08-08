@@ -1,21 +1,25 @@
 //this is a component for delete book
-function Delete({isbn}){
+import React, { useState, useEffect } from 'react';
 
-    let remove = localStorage.getItem("Booktable");
+function Delete({ ISBN }) {
+  const [books, setBooks] = useState([]);
 
-    // const replace =
+  useEffect(() => {
+    const storedBooks = JSON.parse(localStorage.getItem('Booktable'));
+   setBooks(storedBooks || [])
+    
+  }, []);
 
-    function HandleDelete(){
+  const handleDelete = () => {
+    const updatedBooks = books.filter((item) => item.ISBN !== ISBN);
+    setBooks(updatedBooks);
+    console.log(updatedBooks)
+    localStorage.setItem('Booktable', JSON.stringify(updatedBooks));
+  };
 
-
-
-    }
-
-    return(
-        
-        <button onClick={HandleDelete()}>Delete</button>
-        
-    )
-
+  return (
+    <button onClick={handleDelete}>Delete</button>
+  );
 }
+
 export default Delete;

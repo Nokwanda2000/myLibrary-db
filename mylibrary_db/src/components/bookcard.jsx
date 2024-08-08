@@ -11,7 +11,8 @@ return(
       // borderColor:"rgb(230, 270, 250)",
       border:"1px solid    #e3ece2",
       borderRadius:"10px",
-      padding:"10px"
+      padding:"10px",
+      marginRight:"10px"
       
      
       
@@ -37,16 +38,17 @@ return(
       }}>{book.PUBLISHER}</p>
       <br></br>
       </span>
-<br></br>
+      <br></br>
       <span style={{fontSize:"30px",
                     float:'left',
                     marginLeft:"-210px"
       }}>{book.PRICE}</span>
 
 
+<br></br>
+<br></br>
 
-
-<Delete/>
+<Delete ISBN={book.ISBN}/>
     </div>
 
     

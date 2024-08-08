@@ -28,9 +28,9 @@ function App() {
         TITLE:"THE DAYS",
         PAGES_NUM:"2006",
         EDITION:"THIRD_ADD",
-        PUBLISHER:"MUZI",
+        PUBLISHER:"by MUZI Mavundla",
         EDITOR:"Z.P DLUDLA",
-        COVERbook_DESIGN:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.characterful.co.za%2Fproduct%2Fwhere-in-the-world-are-you%2F&psig=AOvVaw2Rl3rVjZxlqOs5FataW7ei&ust=1723017954973000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCLCQj6X034cDFQAAAAAdAAAAABAE",
+        COVERbook_DESIGN:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH3KRT0kLpmZrokovQ5MTYijsFoljPuQFgBkNXx7y5g9r1PxsLaVloBnyj4jvW0Zab3dg&usqp=CAU",
         PRICE:"$50",
         FORMAT:"PDF",
         RELEASE_DATE:"2018/06/12"
@@ -40,24 +40,26 @@ function App() {
       TITLE:"STAY",
       PAGES_NUM:"5000",
       EDITION:"First_editio",
-      PUBLISHER:"Bayanda",
+      PUBLISHER:"by Bayanda Shezi",
       EDITOR:"bb",
-      COVERbook_DESIGN:"ni mas",
+      COVERbook_DESIGN:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH3KRT0kLpmZrokovQ5MTYijsFoljPuQFgBkNXx7y5g9r1PxsLaVloBnyj4jvW0Zab3dg&usqp=CAU",
       PRICE:"R340",
       FORMAT:"pdf",
       RELEASE_DATE:"2020/04/04"
   
   }]
   // localStorage.setItem("Booktable",JSON.stringify(Booktable));
+  // let display = JSON.parse(localStorage.getItem("Booktable"))
+  let mybooks =  JSON.parse(localStorage.getItem("Booktable"))
  
   return (
     <>
      
  
-    <Displaybox/>
+    <Displaybox bookList={mybooks}/>
     
 
-    <Bookcard book={Booktable[0]}/>
+    
     <Register/>
 
     
