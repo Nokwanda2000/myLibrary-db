@@ -7,9 +7,9 @@ return(
       width:'340px',
       height:"490px",
       backgroundColor:"white",
-      boxShadow:"11px 11px  rgb(230, 270, 250)",
+      boxShadow:"11px 11px  #c4f1e6",
       // borderColor:"rgb(230, 270, 250)",
-      border:"1px solid    #e3ece2",
+      border:"1px solid  #98d2e4",
       borderRadius:"10px",
       padding:"10px",
       marginRight:"10px"
