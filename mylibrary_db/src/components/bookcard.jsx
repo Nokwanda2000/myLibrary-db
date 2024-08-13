@@ -1,5 +1,8 @@
 import Delete from "./delete"
+import UpdateBook from "./update";
+
 function Bookcard({book}){
+
 
 return(
   <>
@@ -49,6 +52,7 @@ return(
 <br></br>
 
 <Delete ISBN={book.ISBN}/>
+<UpdateBook book={book}/>
     </div>
 
     

@@ -18,7 +18,7 @@ function Delete({ ISBN }) {
   };
 
   return (
-    <button style={{backgroundColor:"lightRed"}} onClick={handleDelete}>Delete</button>
+    <button style={{backgroundColor:"Red"}} onClick={handleDelete}>Delete</button>
   );
 }
 
